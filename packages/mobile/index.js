@@ -1,13 +1,13 @@
 import { registerRootComponent } from "expo";
 import "./global.css";
-import { View } from "react-native";
-import { Button } from "./src";
+import { SafeAreaView } from "react-native";
+import { Button } from "./dls";
 
 export function App() {
   return (
-    <View style={{ width: 400, height: 500 }}>
+    <SafeAreaView>
       <Button />
-    </View>
+    </SafeAreaView>
   );
 }
 

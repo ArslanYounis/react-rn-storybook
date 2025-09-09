@@ -26,5 +26,5 @@
       "@repo/shared": ["../shared/src"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "components", "dls"]
 }
