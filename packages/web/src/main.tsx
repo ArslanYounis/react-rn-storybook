@@ -1,9 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Button } from "../dls";
+import "./index.css";
+import { Button } from "@/components/ui/button";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Button />
+    <div className="flex min-h-svh flex-col items-center justify-center">
+      <Button>Click me</Button>
+    </div>
   </StrictMode>
 );

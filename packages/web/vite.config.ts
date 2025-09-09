@@ -9,6 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@repo/shared": path.resolve(__dirname, "../shared/src"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 });

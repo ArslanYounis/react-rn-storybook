@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-native-web-vite";
 import { View } from "react-native";
 import { fn } from "storybook/test";
 
-import { Button as WebButton } from "../../../packages/web/dls";
+import { Button as WebButton } from "../../../packages/web/src/dls";
 import { Button as MobileButton } from "../../../packages/mobile/dls";
 
 const meta = {

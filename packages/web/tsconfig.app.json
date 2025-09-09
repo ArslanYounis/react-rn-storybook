@@ -23,8 +23,9 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "paths": {
-      "@repo/shared": ["../shared/src"]
+      "@repo/shared": ["../shared/src"],
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "components", "dls"]
+  "include": ["src", "src/components", "src/dls"]
 }
