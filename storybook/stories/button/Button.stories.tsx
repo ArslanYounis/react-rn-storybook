@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react-native-web-vite";
 import { View } from "react-native";
 import { fn } from "storybook/test";
 
-import { Button as WebButton } from "../../../packages/web/src/dls";
-import { Button as MobileButton } from "../../../packages/mobile/dls";
+import { Button as WebButton } from "@repo/web";
+// import { Button as MobileButton } from "@repo/mobile";
 
 const meta = {
   title: "Example/Button",
@@ -21,7 +21,7 @@ const meta = {
   args: { onPress: fn() },
   render: (args, { globals: { platform } }) => {
     return platform === "mobile" ? (
-      <MobileButton {...args} />
+      <WebButton {...args} />
     ) : (
       <WebButton {...args} />
     );

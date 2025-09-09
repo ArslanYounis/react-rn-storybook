@@ -1,14 +1,21 @@
 {
   "name": "@repo/mobile",
-  "main": "index.js",
   "version": "1.0.0",
+  "main": "dls/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dls",
+    "components",
+    "dist"
+  ],
   "scripts": {
     "dev": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

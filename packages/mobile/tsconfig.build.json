@@ -1,11 +1,12 @@
 {
-  "extends": "expo/tsconfig.base",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "strict": true,
-    "paths": {
-      "@/*": ["./*"],
-      "@repo/shared": ["../shared/src"]
-    }
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist",
+    "outDir": "dist",
+    "noEmit": false,
+    "skipLibCheck": true
   },
   "include": [
     "**/*.ts",
