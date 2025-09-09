@@ -1,0 +1,57 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*", "!**/*.stories.{tsx,jsx,mdx}"],
+      "outputs": ["dist/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"]
+    },
+    "format": {
+      "dependsOn": ["^format"],
+      "inputs": ["$TURBO_DEFAULT$"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "inputs": ["$TURBO_DEFAULT$", "jest.config.*", "**/*.test.*", "**/*.spec.*"],
+      "outputs": ["coverage/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "storybook": {
+      "cache": false,
+      "persistent": true
+    },
+    "storybook:ios": {
+      "cache": false,
+      "persistent": true
+    },
+    "storybook:android": {
+      "cache": false,
+      "persistent": true
+    },
+    "storybook:web": {
+      "cache": false,
+      "persistent": true
+    },
+    "storybook-generate": {
+      "dependsOn": ["^storybook-generate"],
+      "inputs": ["$TURBO_DEFAULT$", "**/*.stories.*"],
+      "outputs": [".rnstorybook/storybook.requires.ts"]
+    },
+    "build:storybook": {
+      "dependsOn": ["^build:storybook"],
+      "inputs": ["$TURBO_DEFAULT$", "**/*.stories.*", ".rnstorybook/**"],
+      "outputs": ["storybook-static/**"]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "dls-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "check-types": "turbo run check-types",
+    "test": "turbo run test",
+    "setup": "node packages/setup-script/index.js"
+  },
+  "devDependencies": {
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.6",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.2.4",
+  "workspaces": [
+    "packages/*",
+    "storybook"
+  ],
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx,json,md}": [
+      "prettier --write"
+    ],
+    "**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix --max-warnings 0"
+    ]
+  }
+}
