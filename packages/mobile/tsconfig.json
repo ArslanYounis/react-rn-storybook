@@ -4,18 +4,11 @@
     "strict": true,
     "paths": {
       "@/*": ["./*"],
+      "@/src/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/ui/*": ["./src/components/ui/*"],
       "@repo/shared": ["../shared/src"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts",
-    "nativewind-env.d.ts",
-    "components",
-    "dls",
-    "lib",
-    ".expo/hooks"
-  ]
+  "include": ["src/**/*", ".expo/types/**/*.ts", "expo-env.d.ts", "nativewind-env.d.ts"]
 }

@@ -21,6 +21,7 @@
   },
   "packageManager": "npm@10.2.4",
   "workspaces": [
+    "packages/*",
     "storybook"
   ],
   "lint-staged": {
